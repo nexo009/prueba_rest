@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using prueba_rest.Models;
 
 namespace prueba_rest.Controllers
 {
@@ -16,13 +17,19 @@ namespace prueba_rest.Controllers
         }
 
         // GET: api/GeneralPl/5
-        public string Get(int id)
+        public GeneralPl Get(int id)
         {
-            return "Alguna Persona según Id";
+            GeneralPl pl = new GeneralPl();
+            pl.EXPEDIENTE = "EXPEDIENTE";
+            pl.NOMBRE1 = "Smith";
+            pl.PATERNO = "Sam";
+
+
+            return pl;
         }
 
         // POST: api/GeneralPl
-        public void Post([FromBody]string value)
+        public void Post([FromBody]GeneralPl value)
         {
         }
 
