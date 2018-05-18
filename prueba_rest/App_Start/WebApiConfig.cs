@@ -25,6 +25,8 @@ namespace prueba_rest
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+            //para eliminar el formato xml y que quede por defecto la salida de datos como formato json
+            //config.Formatters.Remove(config.Formatters.XmlFormatter);
         }
     }
 }
